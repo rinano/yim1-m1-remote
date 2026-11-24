@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+      Night variant: same near-black window background (the app is dark-first),
+      but light system-bar icons only make sense with a dark background, so the
+      light-status-bar flag is off here as well.
+    -->
+    <style name="Theme.Yim1Remote" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/yim1_window_background</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  All user-visible copy for YI M1 遥控 (third-party replacement for the dead
+  official YI Mirrorless app). Chinese is the only shipped language: the camera
+  and its users are Chinese-market and the official app was Chinese-only.
+
+  This app releases only the camera-local capabilities (connect / live view /
+  remote capture / camera settings / SD-card gallery).
+-->
+<resources>
+
+    <string name="app_name">YI M1 遥控</string>
+
+    <!-- Bottom navigation -->
+    <string name="tab_connect">连接</string>
+    <string name="tab_remote">遥控</string>
+    <string name="tab_gallery">相册</string>
+
+    <!-- Generic actions / labels -->
+    <string name="action_connect">连接相机</string>
+    <string name="action_disconnect">断开连接</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_save">保存</string>
+    <string name="action_delete">删除</string>
+    <string name="action_close">关闭</string>
+    <string name="action_retry">重试</string>
+    <string name="action_refresh">刷新</string>
+    <string name="action_download">下载</string>
+    <string name="action_reset_default">恢复默认</string>
+    <string name="action_edit_address">修改地址</string>
+    <string name="action_select_all">全选</string>
+    <string name="action_clear_selection">取消全选</string>
+    <string name="action_exit_selection">退出多选</string>
+    <string name="action_go_connect">去连接</string>
+    <string name="action_wifi_settings">打开 Wi-Fi 设置</string>
+    <string name="action_confirm">确认</string>
+    <string name="value_unknown">—</string>
+    <string name="value_connected">已连接</string>
+    <string name="value_connecting">连接中…</string>
+    <string name="value_disconnected">未连接</string>
+    <string name="value_failed">连接失败</string>
+    <string name="value_external_power">外接电源（充电中）</string>
+    <string name="value_lens_warning">镜头未就绪</string>
+    <string name="value_unknown_time">未知时间</string>
+
+    <!-- Content descriptions (accessibility) -->
+    <string name="cd_about_settings">关于与设置</string>
+    <string name="cd_refresh">刷新相册</string>
+    <string name="cd_close">关闭</string>
+    <string name="cd_back">返回</string>
+    <string name="cd_download">下载到手机</string>
+    <string name="cd_delete">删除</string>
+    <string name="cd_play">播放视频</string>
+    <string name="cd_expand">展开</string>
+    <string name="cd_collapse">收起</string>
+    <string name="cd_battery">电量</string>
+    <string name="cd_shutter">快门</string>
+    <string name="cd_auto_focus">自动对焦</string>
+    <string name="cd_gallery">打开相册</string>
+    <string name="cd_camera_settings">拍摄设置</string>
+    <string name="cd_connection_state">连接状态</string>
+    <string name="cd_select">选择</string>
+    <string name="cd_selected">已选择</string>
+    <string name="cd_mf_minus">减少手动对焦距离</string>
+    <string name="cd_mf_plus">增加手动对焦距离</string>
+    <string name="cd_live_view">实时取景画面</string>
+
+    <!-- ============================ Connect tab ============================ -->
+    <string name="connect_hero_title">相机状态</string>
+    <string name="connect_hero_hint">将手机连接到相机 Wi-Fi 热点后，通过相机本地接口直接控制。</string>
+    <string name="label_battery">电量</string>
+    <string name="label_remaining_shots">剩余张数</string>
+    <string name="label_firmware">固件版本</string>
+    <string name="label_lens">镜头</string>
+    <string name="label_camera_address">相机地址</string>
+    <string name="connect_address_hint">默认地址 http://192.168.0.10，连接相机热点后一般无需修改。</string>
+    <string name="connect_help_title">连接帮助</string>
+    <string name="connect_help_step_1">相机开机，并插入已格式化的 SD 卡。</string>
+    <string name="connect_help_step_2">在相机屏幕右滑进入设置页 → 连接设置 → 打开（自动）。</string>
+    <string name="connect_help_step_3">在手机系统 Wi-Fi 设置中连接相机热点，SSID 与密码显示在相机屏幕上。</string>
+    <string name="connect_help_step_4">回到本应用，点击「连接相机」。</string>
+    <string name="connect_help_note">仅支持 Android 8.0 及以上。相机热点没有互联网，若系统提示「无网络连接」，请选择「保持连接」。</string>
+    <string name="connect_help_wifi_note">打开 Wi-Fi 设置后请先连接相机热点，再回到本页连接相机。</string>
+    <string name="connect_error_title">无法连接相机</string>
+    <string name="connect_error_hint">请确认手机已连接相机 Wi-Fi 热点、相机处于开机状态，且上方相机地址正确。</string>
+    <string name="connect_connecting">正在连接相机…</string>
+    <string name="connect_camera_hint">连接后可实时取景、调整曝光参数并拍摄。</string>
+
+    <!-- Address edit dialog -->
+    <string name="dialog_address_title">相机地址</string>
+    <string name="dialog_address_body">相机热点地址默认为 http://192.168.0.10，仅调试或特殊网络环境需要修改。</string>
+    <string name="hint_base_url_normalized">将使用 %1$s</string>
+    <string name="error_base_url_invalid">请输入有效地址，例如 192.168.0.10 或 http://192.168.0.10:80</string>
+    <string name="hint_default_base_url">默认：%1$s</string>
+
+    <!-- ============================ Remote tab ============================= -->
+    <string name="remote_not_connected">未连接相机</string>
+    <string name="remote_not_connected_hint">连接相机后即可在此实时取景并控制拍摄。</string>
+    <string name="remote_live_starting">正在启动实时取景…</string>
+    <string name="remote_live_stalled">画面已中断</string>
+    <string name="remote_live_no_frames">未接收到画面</string>
+    <string name="remote_live_error_hint">请确认相机已开机并处于拍摄模式，然后重试。</string>
+    <string name="remote_live_tap_hint">点击画面可对焦</string>
+    <string name="remote_live_retry">重试画面</string>
+    <string name="remote_shooting">拍摄中</string>
+    <string name="remote_recording">录制中</string>
+    <string name="remote_action_capture">拍照</string>
+    <string name="remote_action_auto_focus">自动对焦</string>
+    <string name="remote_action_settings">拍摄设置</string>
+    <string name="remote_capture_running">正在拍摄…</string>
+    <string name="remote_capture_cancel">取消拍摄</string>
+    <string name="remote_focus_tag">对焦</string>
+    <string name="remote_label_shutter">快门</string>
+    <string name="remote_label_iso">ISO</string>
+    <string name="remote_label_aperture">光圈</string>
+    <string name="remote_label_ev">曝光补偿</string>
+    <string name="remote_label_wb">白平衡</string>
+    <string name="remote_label_focus">对焦模式</string>
+    <string name="remote_label_drive">驱动模式</string>
+    <string name="remote_label_metering">测光</string>
+    <string name="remote_label_quality">画质</string>
+    <string name="remote_label_format">格式</string>
+    <string name="remote_label_color">色彩</string>
+    <string name="remote_label_aspect">比例</string>
+    <string name="remote_label_delay">延时拍摄</string>
+    <string name="remote_label_mf">手动对焦</string>
+    <string name="remote_label_exposure_mode">曝光模式</string>
+    <string name="remote_shots_left_fmt">剩余 %1$s 张</string>
+    <string name="remote_battery_fmt">%1$d%%</string>
+    <string name="remote_setting_unavailable">当前曝光模式下不可调</string>
+    <string name="remote_mf_adjust">− / +</string>
+    <string name="remote_settings_title">拍摄设置</string>
+    <string name="settings_group_capture">拍摄</string>
+    <string name="settings_group_exposure">曝光</string>
+    <string name="settings_group_other">其他</string>
+    <string name="settings_group_focus">对焦</string>
+    <string name="mf_minus_label">−</string>
+    <string name="mf_plus_label">+</string>
+    <string name="remote_settings_hint">点击各项即可调整；灰色项目在当前曝光模式下不可用。</string>
+    <string name="remote_settings_read_failed">相机参数暂未就绪</string>
+    <string name="remote_picker_title">选择%1$s</string>
+
+    <!-- ============================ Gallery tab ============================ -->
+    <string name="gallery_not_connected">未连接相机</string>
+    <string name="gallery_not_connected_hint">连接相机后可浏览、下载与删除相机存储卡中的照片。</string>
+    <string name="gallery_empty">相机内暂无照片</string>
+    <string name="gallery_empty_hint">按下快门拍摄后，照片会显示在这里。</string>
+    <string name="gallery_error">无法读取相机相册</string>
+    <string name="gallery_loading">正在读取相机相册…</string>
+    <string name="gallery_loading_more">正在加载更多…</string>
+    <string name="gallery_end_reached">已加载全部照片</string>
+    <string name="gallery_badge_video">视频</string>
+    <string name="gallery_badge_raw">RAW</string>
+    <string name="gallery_badge_protected">已保护</string>
+    <string name="gallery_selection_count_fmt">已选 %1$d 项</string>
+    <string name="gallery_select_hint">长按可多选</string>
+    <string name="gallery_delete_protected_skip">已跳过 %1$d 个受保护文件</string>
+
+    <!-- Full-screen viewer -->
+    <string name="viewer_loading">正在加载预览…</string>
+    <string name="viewer_original_loading">正在加载原图…</string>
+    <string name="viewer_protected_hint">该文件已保护，需在相机上解除保护后才能删除。</string>
+    <string name="viewer_video_hint">视频文件将保存原始文件，暂不支持在线播放。</string>
+    <string name="viewer_raw_hint">相机未返回 RAW 预览图，可直接下载原始文件。</string>
+    <string name="viewer_preview_unavailable">相机未返回预览图，可直接下载原始文件。</string>
+    <string name="viewer_label_file">文件名</string>
+    <string name="viewer_label_date">拍摄时间</string>
+    <string name="viewer_label_type">类型</string>
+    <string name="viewer_type_photo">照片</string>
+    <string name="viewer_type_video">视频</string>
+    <string name="viewer_type_raw">RAW 照片</string>
+
+    <!-- Delete confirmations -->
+    <string name="delete_confirm_title">删除文件</string>
+    <string name="delete_confirm_single">将从相机存储卡删除 %1$s，此操作无法撤销。</string>
+    <string name="delete_confirm_batch">将从相机存储卡删除 %1$d 个文件，此操作无法撤销。</string>
+    <string name="delete_confirm_protected_note">受保护的文件会被自动跳过。</string>
+    <string name="delete_done">已删除</string>
+    <string name="delete_failed">删除失败</string>
+
+    <!-- Download progress / result -->
+    <string name="download_dialog_title">正在下载</string>
+    <string name="download_dialog_batch_fmt">第 %1$d / %2$d 个</string>
+    <string name="download_dialog_name">%1$s</string>
+    <string name="download_saved_fmt">已保存：%1$s</string>
+    <string name="download_saved_count_fmt">已保存 %1$d 个文件</string>
+    <string name="download_partial_fmt">已保存 %1$d 个，失败 %2$d 个</string>
+    <string name="download_failed">下载失败</string>
+    <string name="download_cancelled">已取消下载</string>
+    <string name="download_saved_dir">保存位置：系统相册 Pictures/YI M1 Remote</string>
+    <string name="download_saved_dir_legacy">保存位置：应用专属图片目录（Android 9 及以下）</string>
+    <string name="error_create_gallery_entry">无法在系统相册中创建文件</string>
+    <string name="error_open_gallery_stream">无法打开系统相册写入流</string>
+    <string name="error_create_picture_dir">无法创建图片保存目录</string>
+
+    <!-- ====================== About / settings dialog ====================== -->
+    <string name="about_title">关于与设置</string>
+    <string name="about_version_fmt">版本 %1$s</string>
+    <string name="about_camera_address">相机地址</string>
+    <string name="about_credit">第三方开源遥控应用，通过逆向官方 App 恢复的相机本地接口工作。</string>
+    <string name="about_protocol_note">协议来源：官方 App「YI Mirrorless」（com.xiaoyi.mirrorlesscamera）的逆向分析及公开的逆向研究项目。本应用仅通过相机本地接口工作。</string>
+    <string name="about_storage_note">下载文件保存到系统相册 Pictures/YI M1 Remote；Android 9 及以下保存到应用专属图片目录。</string>
+    <string name="about_runtime_note">运行环境：Android 8.0 及以上，手机直连相机 Wi-Fi 热点。</string>
+
+    <!-- ========================= Snackbar messages ======================== -->
+    <string name="snackbar_connected">已连接相机</string>
+    <string name="snackbar_disconnected">已断开连接</string>
+    <string name="snackbar_connect_failed">连接失败</string>
+    <string name="snackbar_capture_done">拍摄完成</string>
+    <string name="snackbar_capture_failed">拍摄失败</string>
+    <string name="snackbar_focus_failed">对焦失败</string>
+    <string name="snackbar_setting_failed">设置未生效</string>
+    <string name="snackbar_gallery_failed">相册刷新失败</string>
+    <string name="snackbar_address_saved">相机地址已更新</string>
+    <string name="snackbar_separator"> · </string>
+    <string name="snackbar_ble_wifi_ready_fmt">热点已打开，请在系统 Wi-Fi 中连接 %1$s</string>
+    <string name="snackbar_ble_copied">已复制到剪贴板</string>
+
+    <!-- ===================== 蓝牙自动配网 (BLE provisioning) ===================== -->
+    <string name="ble_card_title">蓝牙自动配网</string>
+    <string name="ble_intro">相机 Wi-Fi 默认关闭，且热点密码每次随机。通过蓝牙配对可自动开启相机 Wi-Fi，并读取本次热点的名称与密码。</string>
+    <string name="ble_pairing_warning">相机只保存一个蓝牙配对：使用本 App 配网会作废官方 App 或其他手机的配对，反之亦然。配对时需在相机屏幕上人工确认。</string>
+    <string name="ble_sd_hint">请确保相机开机并插入 SD 卡。</string>
+    <string name="ble_scan_action">扫描相机</string>
+    <string name="ble_rescan_action">重新扫描</string>
+    <string name="ble_provision_action">开始配网</string>
+    <string name="ble_provision_again_fmt">再次配网（%1$s）</string>
+    <string name="ble_scanning">正在扫描相机蓝牙…</string>
+    <string name="ble_scan_cancel">取消扫描</string>
+    <string name="ble_not_found">未找到相机，请确认相机已开机、插入了 SD 卡，并靠近手机</string>
+    <string name="ble_not_found_hint">仍找不到时：确认相机蓝牙未被其他手机连接；Android 10 及以下还需要打开系统定位开关。</string>
+    <string name="ble_devices_title">发现以下蓝牙设备，点击开始配网</string>
+    <string name="ble_device_bonded">已配对</string>
+    <string name="ble_device_camera">可能是相机</string>
+    <string name="ble_provisioning">正在配网…</string>
+    <string name="ble_awaiting_camera">请在相机屏幕上按「接受 / 确认」完成配对（等待约 45 秒）</string>
+    <string name="ble_provision_cancel">取消配网</string>
+    <string name="ble_success_title">已读取相机 Wi-Fi</string>
+    <string name="ble_success_ssid_fmt">Wi-Fi 名称：%1$s</string>
+    <string name="ble_password_label">密码</string>
+    <string name="ble_show_password">显示密码</string>
+    <string name="ble_hide_password">隐藏密码</string>
+    <string name="ble_copy_ssid">复制名称</string>
+    <string name="ble_copy_password">复制密码</string>
+    <string name="ble_clip_ssid_label">YI M1 Wi-Fi 名称</string>
+    <string name="ble_clip_password_label">YI M1 Wi-Fi 密码</string>
+    <string name="ble_success_instruction">在系统 Wi-Fi 中连接该热点（名称与密码可复制），返回本页后点击「连接相机」。</string>
+    <string name="ble_wifi_off_warning">相机 Wi-Fi 开启可能未成功：可稍后重新配网，或在相机菜单中手动打开 Wi-Fi。</string>
+    <string name="ble_radio_note">相机 Wi-Fi 与蓝牙共用 2.4GHz 射频，入网后建议关闭手机蓝牙以减少取景卡顿。</string>
+    <string name="ble_security_note">该协议为明文协议，相机屏幕上的配对确认是唯一的授权环节。</string>
+    <string name="ble_failed_title">配网失败</string>
+    <string name="ble_camera_action_hint">若多次失败：请在相机菜单中「忘记设备 / 解除绑定」，或恢复相机出厂设置后重试（App 内无法自动解除相机端的旧绑定）。</string>
+    <string name="ble_retry_action">重试</string>
+    <string name="ble_provision_again">重新配网</string>
+    <string name="ble_bluetooth_off_title">请打开手机蓝牙</string>
+    <string name="ble_bluetooth_off_hint">打开蓝牙后返回本页，配网状态会自动重新检查。</string>
+    <string name="ble_open_bluetooth_settings">打开蓝牙设置</string>
+    <string name="ble_recheck">重新检查</string>
+    <string name="ble_permission_title">需要蓝牙权限</string>
+    <string name="ble_permission_explain">扫描并连接相机蓝牙需要以下权限：%1$s。权限仅用于连接相机，不会收集位置信息。</string>
+    <string name="ble_permission_bluetooth">蓝牙 / 附近设备</string>
+    <string name="ble_permission_location">位置信息（Android 10 及以下扫描蓝牙所需）</string>
+    <string name="ble_grant_permission">授予权限</string>
+    <string name="ble_open_app_settings">打开应用设置</string>
+    <string name="ble_permission_denied_hint">权限被拒绝。若系统不再弹出授权窗口，请在「应用设置 → 权限」中手动授予蓝牙权限。</string>
+    <string name="ble_unsupported_title">此手机不支持蓝牙低功耗（BLE）</string>
+    <string name="ble_unsupported_hint">无法使用自动配网；仍可在系统 Wi-Fi 中手动连接相机热点后点击「连接相机」。</string>
+
+
+    <!-- 照片详情 / EXIF -->
+    <string name="viewer_exif_title">照片信息</string>
+    <string name="viewer_exif_loading">正在读取照片信息…</string>
+    <string name="viewer_label_size">文件大小</string>
+    <string name="viewer_label_dimensions">尺寸</string>
+    <string name="viewer_label_aperture">光圈</string>
+    <string name="viewer_label_shutter">快门</string>
+    <string name="viewer_label_iso">ISO</string>
+    <string name="viewer_label_focus_mode">对焦模式</string>
+    <string name="viewer_label_wb">白平衡</string>
+    <string name="viewer_label_focal">焦距</string>
+    <string name="viewer_label_make">厂商</string>
+    <string name="viewer_label_model">机型</string>
+    <string name="viewer_label_duration">时长</string>
+    <string name="viewer_camera_clock_note">相机没有内置时钟，开机后由手机通过蓝牙校准。</string>
+
+    <!-- 本机相册 -->
+    <string name="tab_local">本机</string>
+    <string name="local_title">本机相册</string>
+    <string name="local_empty">还没有下载的照片</string>
+    <string name="local_empty_hint">在相机相册里选择照片并下载后，会出现在这里。</string>
+    <string name="local_loading">正在读取本机照片…</string>
+    <string name="local_loading_more">正在加载…</string>
+    <string name="local_permission_hint">读取本机相册需要媒体权限。</string>
+    <string name="local_grant_permission">授予权限</string>
+    <string name="local_count_fmt">共 %1$d 项</string>
+    <string name="local_select_hint">长按可多选</string>
+    <string name="local_selected_fmt">已选 %1$d 项</string>
+    <string name="local_share">分享</string>
+    <string name="local_delete">删除</string>
+    <string name="local_delete_confirm_fmt">删除选中的 %1$d 个本机文件？此操作只删除手机上的副本，不影响相机存储卡。</string>
+    <string name="local_delete_single_fmt">删除本机文件 %1$s？</string>
+    <string name="local_rotate_left">向左旋转</string>
+    <string name="local_rotate_right">向右旋转</string>
+    <string name="local_saved">已保存修改</string>
+    <string name="local_share_failed">没有可用的分享应用</string>
+    <string name="local_open_failed">无法打开该文件</string>
+    <string name="local_video_hint">视频已下载到手机，可用系统播放器打开。</string>
+    <string name="local_error">读取本机相册失败</string>
+    <string name="local_image_info">图片信息</string>
+
+    <!-- 相机时间校准 -->
+    <string name="time_sync_title">相机时间校准</string>
+    <string name="time_sync_action">对时</string>
+    <string name="time_sync_running">正在对时…</string>
+    <string name="time_sync_hint">相机没有内置时钟，断电后拍摄时间会重置；连接相机后会自动尝试通过蓝牙对时。</string>
+    <string name="time_sync_requires_ble">需要先在「蓝牙自动配网」中连接一次相机，才能对时。</string>
+    <string name="time_sync_last_fmt">上次对时：%1$s</string>
+    <string name="snackbar_camera_time_synced">相机时间已同步</string>
+    <string name="snackbar_camera_time_failed">相机对时失败</string>
+
+    <!-- 取景辅助 (A2) -->
+    <string name="assist_title">取景辅助</string>
+    <string name="assist_peaking">峰值对焦</string>
+    <string name="assist_zebra">高光斑马纹</string>
+    <string name="assist_grid">九宫格</string>
+    <string name="assist_level">水平仪</string>
+    <string name="assist_histogram">直方图</string>
+    <string name="assist_exposure_sim">曝光模拟（客户端）</string>
+    <string name="assist_close">关闭</string>
+    <string name="assist_on">开</string>
+    <string name="assist_off">关</string>
+    <string name="cd_assist">取景辅助设置</string>
+    <string name="assist_exposure_sim_note">M 档取景本身不随曝光变化；这里的亮度调整只是客户端模拟，拍摄结果以相机为准。</string>
+
+    <!-- 曝光检查 (A1) -->
+    <string name="exposure_check_action">曝光检查</string>
+    <string name="exposure_check_title">曝光检查（试拍）</string>
+    <string name="exposure_check_loading">正在拍摄并分析…</string>
+    <string name="exposure_check_hint">相机的 M 档取景不随曝光变化，这里用试拍照片评估实际曝光。</string>
+    <string name="exposure_check_mean_fmt">平均亮度 %1$d%%</string>
+    <string name="exposure_check_highlight_fmt">高光溢出 %1$d%%</string>
+    <string name="exposure_check_shadow_fmt">暗部溢出 %1$d%%</string>
+    <string name="exposure_check_ok">曝光基本合适</string>
+    <string name="exposure_check_dark">偏暗</string>
+    <string name="exposure_check_bright">偏亮</string>
+    <string name="exposure_check_advice_dark">建议增加曝光：提高 EV、降低快门速度或提高 ISO。</string>
+    <string name="exposure_check_advice_bright">建议降低曝光：降低 EV、提高快门速度或降低 ISO。</string>
+    <string name="exposure_check_advice_ok">曝光合适，可以按正常参数拍摄。</string>
+    <string name="exposure_check_advice_clipped">高光溢出较多，建议降低曝光或降低高光对比。</string>
+    <string name="exposure_check_delete">删除试拍</string>
+    <string name="exposure_check_close">关闭</string>
+    <string name="exposure_check_no_item">没有拿到试拍照片，请重试。</string>
+    <string name="snackbar_exposure_check_failed">曝光检查失败</string>
+
+    <!-- 间隔拍摄 / 曝光包围 (A4) -->
+    <string name="interval_action">间隔/BKT</string>
+    <string name="interval_title">间隔拍摄 / 曝光包围</string>
+    <string name="interval_mode_interval">间隔拍摄</string>
+    <string name="interval_mode_bracket">曝光包围（EV）</string>
+    <string name="interval_shots">张数</string>
+    <string name="interval_seconds">间隔（秒）</string>
+    <string name="interval_ev_step">包围步长</string>
+    <string name="interval_start">开始</string>
+    <string name="interval_stop">停止</string>
+    <string name="interval_progress_fmt">第 %1$d / %2$d 张</string>
+    <string name="interval_waiting_fmt">下一张：%1$d 秒</string>
+    <string name="interval_done_fmt">完成 %1$d 张</string>
+    <string name="interval_stopped">已停止</string>
+    <string name="interval_failed_fmt">失败：%1$s</string>
+    <string name="interval_hint">3.1 固件不接受相机端间隔/张数命令，这里由 App 定时触发快门；请保持连接并保持本页在前台。</string>
+    <string name="interval_active_label">间隔拍摄中</string>
+
+    <!-- 机身信息（蓝牙 41106da2） -->
+    <string name="label_region">区域</string>
+    <string name="label_identity_lens">镜头固件</string>
+    <string name="label_ble_protocol">BLE 协议</string>
+    <string name="action_read_identity">读取机身信息</string>
+    <string name="identity_reading">正在读取…</string>
+    <string name="identity_error_fmt">读取失败：%1$s</string>
+    <string name="identity_hint">机身固件/区域/镜头固件来自相机蓝牙信息（41106da2），需相机蓝牙可连接；读取不需要重新配对。</string>
+    <string name="identity_unknown">—</string>
+
+    <!-- 对焦区域 -->
+    <string name="focus_area_point">区域：点选</string>
+    <string name="focus_area_auto">区域：自动</string>
+    <string name="focus_area_hint">点选：点击画面选择对焦点；自动：由相机选择对焦区域。</string>
+</resources>

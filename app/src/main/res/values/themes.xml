@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+      Compose draws all chrome; the platform theme only avoids an ActionBar and
+      sets a dark window background so cold start does not flash white.
+      enableEdgeToEdge() in MainActivity makes the system bars transparent and
+      picks ligh/dark icons from the system setting.
+    -->
+    <style name="Theme.Yim1Remote" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/yim1_window_background</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

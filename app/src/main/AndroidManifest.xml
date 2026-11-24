@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+      Permissions for talking to the YI M1: the camera raises its own WiFi
+      access point (192.168.0.10) and serves a plain-HTTP JSON API there.
+    -->
+
+    <!-- Plain HTTP requests to the camera's local API. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <!-- Detect/observe the camera hotspot. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!--
+      Required to join a specific WiFi network (WifiNetworkSpecifier) and to read
+      the current SSID on API <= 32.
+    -->
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!--
+      API 33+ splits "nearby WiFi" out of location. The app never derives
+      location from WiFi results, hence neverForLocation.
+    -->
+    <uses-permission
+        android:name="android.permission.NEARBY_WIFI_DEVICES"
+        android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="33" />
+
+    <!--
+      BLE provisioning: the camera's WiFi is off by default and its hotspot
+      password is random per session, so the app pairs over BLE to switch the
+      hotspot on and read the SSID/password (see data/ble and docs/BLE-PROVISIONING.md).
+      API 31+ uses the split Bluetooth permissions; older releases use the legacy
+      ones plus location for LE scanning.
+    -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="31" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_CONNECT"
+        tools:targetApi="31" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+
+    <!--
+      No legacy storage permissions: gallery downloads go to
+      DCIM/YI M1 through MediaStore; transient files live in the
+      app-specific cache directory.
+    -->
+
+    <!-- The camera is controlled over its own WiFi access point. -->
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="true" />
+    <!-- BLE provisioning is required in practice, but keep it optional so the
+         app still installs on BLE-less devices and can use the manual flow. -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Yim1Remote"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|density|uiMode"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
